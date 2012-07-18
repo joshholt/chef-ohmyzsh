@@ -1,5 +1,6 @@
 include_recipe "build-essential"
 include_recipe "git"
+include_recipe "golang"
 include_recipe "rvm::vagrant"
 include_recipe "rvm::system"
 package "zsh"
@@ -13,7 +14,6 @@ bash "Install ZSH" do
     sed -i 's/ZSH_THEME\=.*/ZSH_THEME\=\"fino-time\"/g' /home/vagrant/.zshrc
     echo 'source /home/vagrant/.bash_golang' >> /home/vagrant/.zshrc
     sudo chsh -s /bin/zsh vagrant
-    curl -L https://get.rvm.io | bash -s stable
   EOC
   creates "/home/vagrant/.zshrc"
 end
