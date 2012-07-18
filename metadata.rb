@@ -9,8 +9,7 @@ recipe "ohmyzsh", "Installs OH-My-ZSH based on the default install method"
 
 depends "build-essential"
 depends "git"
-depends "rvm::vagrant"
-depends "rvm::system"
+depends "rvm"
 
 %w{ debian ubuntu centos redhat }.each do |os|
   supports os
