@@ -1,7 +1,7 @@
 include_recipe "build-essential"
 include_recipe "git"
 include_recipe "rvm::vagrant"
-include_recipe "rvm::system"
+#include_recipe "rvm::system"
 package "zsh"
 
 bash "Install ZSH" do
